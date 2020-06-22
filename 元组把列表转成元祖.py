@@ -1,0 +1,5 @@
+s = input('请输入一些字符串，用空格隔开：')
+list_s = s.split(' ')
+tuple_s = tuple(list_s)
+result = tuple_s * 3 + ('hello', 'world')
+print(result)
