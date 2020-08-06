@@ -42,6 +42,7 @@ v = 'B'
 while v != None:
     print(v)
     v = parent[v]
+
 def DFS(graph, s):#graph图，s为初始节点
     stack = []#队列，先进先出。先放进去再弹出来
     stack.append(s)

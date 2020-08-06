@@ -23,7 +23,7 @@ def heapify(tree, n, i):
 def build_heap(tree, n):
     last_node = n-1
     parent = int((last_node-1)/2)
-    for i in range(parent,-1,-1):
+    for i in range(parent, -1, -1):
         heapify(tree, n, i)
 def heap_sort(tree, n):
     build_heap(tree, n)
@@ -36,3 +36,8 @@ n = 6
 #build_heap(tree, n)
 heap_sort(tree, n)
 print(tree)
+"""
+我有提到过一个前提：对一个节点做heapify的时候，必须保证它的所有子树都已经是堆。
+所以，在这个前提下，如果要做heapify的节点已经符合“父节点 > 子节点”的性质，那么这就已经是一个堆了；就没有必要往下走了。
+另外，我们的build_heap函数是从最后一个不是叶节点的点开始往前做heapify操作的，所以最后是可以形成一个堆。
+"""
