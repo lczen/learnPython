@@ -1,2 +1,5 @@
-a = {1:2,2:2}
-print(a.get(1, 3)+1)
+chuan = ['b','c','a']
+
+while chuan.pop(0) != 'a':
+    continue
+print('end')
