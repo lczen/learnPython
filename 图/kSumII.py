@@ -7,7 +7,7 @@ def kSumII(A, k, target):
 
 def dfs(A, k, target, m, path):
     if k == 0 and target == 0:
-        ans.append(path[:])
+        ans.append(path)
     if k < 0 or target < 0:
         return
     for i in range(m, len(A)):
