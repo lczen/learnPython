@@ -1,4 +1,4 @@
-def threeSum(self, nums):
+def threeSum(nums):
     res = []
     n = len(nums)
     if not nums or n<3:
@@ -26,7 +26,8 @@ def threeSum(self, nums):
             else:
                 L = L + 1
     return res
-
+nums = [-1,0,1,2,-1,-1]
+print(threeSum(nums))
 
 
 

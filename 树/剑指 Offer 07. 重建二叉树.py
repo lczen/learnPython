@@ -21,3 +21,13 @@ class Solution:
         root.left = self.recur(pre_root + 1, in_left, i - 1)
         root.right = self.recur(pre_root + i - in_left + 1, i + 1, in_right)
         return root
+    def ino(self, root):
+        if not root:
+            return
+        self.ino(root.left)
+        print(root.val)
+        self.ino(root.right)
+
+preorder = [3, 9, 2, 1, 7]
+inorder  = [9, 3, 1, 2, 7]
+Solution().ino(Solution().buildTree(preorder, inorder))
